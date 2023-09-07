@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+
+class WhereSample2
+{
+	static void Main()
+	{
+		int[] scores = { 97, 92, 81, 60 };
+		
+		var queryLowNums1 =
+			from num in scores
+			where num > 80 
+			select num;
+		
+		foreach (var s in queryLowNums1)
+		{
+			Console.Write(s.ToString()+ " ");		
+		}
+		Console.WriteLine();
+	}
+}
