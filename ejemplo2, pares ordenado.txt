@@ -5,11 +5,12 @@ class WhereSample2
 {
 	static void Main()
 	{
-		int[] scores = { 97, 92, 81, 60 };
+		int[] scores = { 90, 71, 82, 93, 75, 82 };
 		
 		var queryLowNums =
 			from num in scores
 			where IsEven(num)
+			where num > 80
 			select num;
 		
 		foreach (var s in queryLowNums)
